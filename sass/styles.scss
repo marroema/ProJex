@@ -1,0 +1,177 @@
+// Import Bootstrap Compass integration
+@import "bootstrap-compass";
+
+// Import custom Bootstrap variables
+@import "bootstrap-variables";
+
+// Import Bootstrap for Sass
+@import "bootstrap";
+
+//My imports
+@import "../stylesheets/partials/_btns-style.scss";
+@import "../stylesheets/partials/_ul-no-bullets.scss";
+/*@import "../partials/_ul-no-bullets.scss";
+@import "../partials/_btns-style.scss";*/
+
+$colorWhite: white;
+$min_height_red: 737px;
+$min_height_nobg: 480px;
+$radius: 50%;
+/*$overall_color: #ff5959;*/
+ 
+//ID's
+
+#headerProJex {
+    background: $overall_color;
+    min-height: 35px;    
+    .navbar-default {
+        border-color: transparent;
+    }    
+    .navbar-nav {                
+        > li > a {
+            color: white;
+        }
+    }    
+}
+
+#bannerProJex {
+    background: url(../imagesProJex/backgroundContent.png) center no-repeat;
+    min-height: $min_height_red;
+    background-size: cover;
+    color: $colorWhite;    
+    .orderBannerProjex {
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 200px;        
+    }    
+    .orderBannerProjex > p{   
+        padding-bottom: 22px;
+    }    
+    .leftOrder {
+        text-align: left;
+        font-weight: bold;
+    }    
+    .leftOrder > h2 {
+        font-size: 40px;
+    }    
+    .btn, .btn_default{
+        color: $colorWhite;
+        font-size: 27px;
+        margin: 0 5px 15px 0;
+        /*background: $overall_color;
+          border-color: $overall_color;
+          text-align: center;
+          width: 270px;*/
+    }    
+    .btn-no-bg{
+/*        background: transparent;*/
+    }     
+    .bannerImg {
+            @media screen and (max-width: 768px) {
+            margin-bottom: 50px;
+            /*background: orange;*/
+            /*background: cyan;*/
+        }
+    }    
+}
+
+#serviceProJex {
+    min-height: $min_height_nobg;
+    //background: #ccc;    
+    .service-text-center > img {
+        padding-bottom: 25px;
+    }
+}
+
+#portfolioProJex {
+    background: $overall_color;
+    color: $colorWhite;    
+}
+
+#teamProJex {
+    min-height: 600px;    
+/*    .social-icons > li {
+        display: inline;
+    }    */
+/*    .social-icons {
+        padding-left: 0; 
+    }*/
+}
+
+#newsProJex {
+    background: $overall_color;
+    color: $colorWhite;
+    min-height: 100px;    
+    .bg-img-news {
+        //background-size: cover;
+        height: 185px;
+        width: auto;
+    }
+}
+
+#contactProJex {
+    min-height: 400px;
+    textarea[name=contact_textarea]{
+    resize: none;
+    }    
+    .btn, .btn_default{
+        color: $colorWhite;
+        font-size: 20px;
+        /*background: $overall_color;
+        border-color: $overall_color;
+        text-align: center;*/        
+        /*padding: 0 70px;*/
+    }    
+    .btn-no-bg{
+        /*background: transparent;*/
+        color: black;        
+    }
+}
+
+#footerProJex {
+    min-height: 120px;
+    background: #ccc;
+    .logoFooter {
+        float: left;        
+        background: url("../imagesProJex/logoProJex.png") center no-repeat;
+        background-size: contain;
+        margin-top: 20px;
+        width: 182px;
+        height: 45px;
+    }    
+    .designedFooter {
+        margin-top: 20px;
+        float: right;
+    }
+}
+
+//Clases
+
+.navbar-default {
+    background: transparent;
+    margin: 20px auto;
+}
+
+//alineado al centro
+.service-text-center {    
+        text-align: center;
+}
+
+.service-text-center > img {
+        padding-bottom: 25px;
+}
+
+.leftOrder{
+        text-align: left;
+}
+
+//atributos
+h3[id=information-title] {
+    margin-top: 0;
+}
+
+img {
+    max-width: 100%;
+    padding: 10px;
+    background-size: cover;
+}

@@ -1,0 +1,10 @@
+$overall_color: #ff5959;
+.btn, .btn_default{
+    background: $overall_color;
+    border-color: $overall_color;
+    text-align: center;
+    width: 270px;
+}    
+.btn-no-bg{
+    background: transparent;
+}
