@@ -10,17 +10,28 @@
 //My imports
 @import "../stylesheets/partials/_btns-style.scss";
 @import "../stylesheets/partials/_ul-no-bullets.scss";
-/*@import "../partials/_ul-no-bullets.scss";
-@import "../partials/_btns-style.scss";*/
 
-$colorWhite: white;
-$min_height_red: 737px;
+//font-awesome
+@import "font-awesome-compass";
+@import "font-awesome";
+
+//Sprite import 
+
+/*$toolbar-layout:smart;
+@import "toolbar/*.png"; 
+@include all-toolbar-sprites(true);*/
+ 
+$colorWhite: white; 
+$min_height_red: 737px;  
 $min_height_nobg: 480px;
 $radius: 50%;
-/*$overall_color: #ff5959;*/
- 
+
+
 //ID's
 
+.toolbar-logoProJex{
+    display: block;
+}
 #headerProJex {
     background: $overall_color;
     min-height: 35px;    
@@ -35,14 +46,18 @@ $radius: 50%;
 }
 
 #bannerProJex {
-    background: url(../imagesProJex/backgroundContent.png) center no-repeat;
-    min-height: $min_height_red;
-    background-size: cover;
+    
+}
+
+#OnePageProJex {
+/*    background-image: url(../imagex/toolbar/backgroundContent.png);
+    background-size: cover;*/
+    display: block;
     color: $colorWhite;    
     .orderBannerProjex {
         margin: 0 auto;
         text-align: center;
-        padding-top: 200px;        
+          
     }    
     .orderBannerProjex > p{   
         padding-bottom: 22px;
@@ -58,26 +73,18 @@ $radius: 50%;
         color: $colorWhite;
         font-size: 27px;
         margin: 0 5px 15px 0;
-        /*background: $overall_color;
-          border-color: $overall_color;
-          text-align: center;
-          width: 270px;*/
     }    
-    .btn-no-bg{
-/*        background: transparent;*/
-    }     
     .bannerImg {
             @media screen and (max-width: 768px) {
             margin-bottom: 50px;
-            /*background: orange;*/
-            /*background: cyan;*/
         }
     }    
 }
 
 #serviceProJex {
-    min-height: $min_height_nobg;
-    //background: #ccc;    
+    
+    display: block;
+    
     .service-text-center > img {
         padding-bottom: 25px;
     }
@@ -90,12 +97,6 @@ $radius: 50%;
 
 #teamProJex {
     min-height: 600px;    
-/*    .social-icons > li {
-        display: inline;
-    }    */
-/*    .social-icons {
-        padding-left: 0; 
-    }*/
 }
 
 #newsProJex {
@@ -103,7 +104,6 @@ $radius: 50%;
     color: $colorWhite;
     min-height: 100px;    
     .bg-img-news {
-        //background-size: cover;
         height: 185px;
         width: auto;
     }
@@ -117,13 +117,8 @@ $radius: 50%;
     .btn, .btn_default{
         color: $colorWhite;
         font-size: 20px;
-        /*background: $overall_color;
-        border-color: $overall_color;
-        text-align: center;*/        
-        /*padding: 0 70px;*/
     }    
     .btn-no-bg{
-        /*background: transparent;*/
         color: black;        
     }
 }
@@ -146,7 +141,7 @@ $radius: 50%;
 }
 
 //Clases
-
+ 
 .navbar-default {
     background: transparent;
     margin: 20px auto;
@@ -174,4 +169,9 @@ img {
     max-width: 100%;
     padding: 10px;
     background-size: cover;
+}
+
+body {
+    background: url(../imagex/toolbar/bodybg.jpg);
+    color: $colorWhite;
 }
