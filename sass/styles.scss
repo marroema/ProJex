@@ -6,20 +6,32 @@
 
 // Import Bootstrap for Sass
 @import "bootstrap";
-
+  
 //My imports
 @import "../stylesheets/partials/_btns-style.scss";
 @import "../stylesheets/partials/_ul-no-bullets.scss";
-
+@import "../mixins/titleAndImage";
+ 
 //font-awesome
 @import "font-awesome-compass";
-@import "font-awesome";
+@import "font-awesome"; 
+@import "font-awesome-sprockets";
 
 //Sprite import 
 
-/*$toolbar-layout:smart;
+$toolbar-layout:smart;
 @import "toolbar/*.png"; 
-@include all-toolbar-sprites(true);*/
+.toolbar-ft_col3image1{
+    @include toolbar-sprite (ft_col3image1, true);
+}
+.toolbar-ft_col3image2{
+    @include toolbar-sprite (ft_col3image2, true);
+}
+.toolbar-ft_col3image3{
+    @include toolbar-sprite (ft_col3image3, true);
+}
+//@include all-toolbar-sprites(true);
+
  
 $colorWhite: white; 
 $min_height_red: 737px;  
@@ -89,14 +101,21 @@ $radius: 50%;
         padding-bottom: 25px;
     }
 }
-
+    
 #portfolioProJex {
     background: $overall_color;
     color: $colorWhite;    
 }
 
 #teamProJex {
-    min-height: 600px;    
+    .teamPictures { 
+        border-radius: 50%;  
+        border: 3px solid $overall_color;
+        width: 150px;
+        height: 150px; 
+        background-color: white;
+        margin: 0 auto;
+    }
 }
 
 #newsProJex {
@@ -141,7 +160,6 @@ $radius: 50%;
 }
 
 //Clases
- 
 .navbar-default {
     background: transparent;
     margin: 20px auto;
@@ -159,7 +177,7 @@ $radius: 50%;
 .leftOrder{
         text-align: left;
 }
-
+ 
 //atributos
 h3[id=information-title] {
     margin-top: 0;
@@ -169,6 +187,14 @@ img {
     max-width: 100%;
     padding: 10px;
     background-size: cover;
+}
+
+//Dynamical Titles and URL's 
+.topBlackTitle{
+    @include titleAndImage(black, '../imagex/toolbar/ft_blackline.png');
+}
+.topWhiteTitle{
+    @include titleAndImage(white, '../imagex/toolbar/ft_whiteimage.png');
 }
 
 body {

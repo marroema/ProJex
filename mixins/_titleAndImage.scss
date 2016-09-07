@@ -1,0 +1,7 @@
+@mixin titleAndImage ($colorTitle, $img){
+    color: $colorTitle;
+    background: url($img) no-repeat;
+    background-position: center bottom;
+    padding: 20px;
+    background-size: contain;
+}
